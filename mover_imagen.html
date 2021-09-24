@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			<meta charset="UFT-8">
+			<title>CIRCULO</title>
+	
+
+	</head>
+	<body bgcolor="blue">
+
+
+  <div class="figura" id="figura">
+<img src= "https://www.sanborns.com.mx/imagenes-sanborns-ii/1200/737052925127.jpg" width="300" height="300" dorder="0" id="figura"/> 
+
+</div>
+
+
+	<script>
+
+		let figura = document.getElementById("figura");
+		let velocidad = 20;
+		let mTop = 0;
+		let mLeft = 0;
+
+
+		document.addEventListener("keydown", function(e){
+
+			if(e.keyCode == "39") {
+				moverDerecha();
+			}
+
+			if(e.keyCode == "37") {
+				moverIzquierda();
+			}
+
+			if(e.keyCode == "38") {
+				moverArriba();
+			}
+
+			if(e.keyCode == "40") {
+				moverAbajo();
+			}
+		})
+
+
+		function moverDerecha(){
+			mLeft += velocidad;
+			figura.style.marginLeft = mLeft +"px";
+		}
+
+		function moverIzquierda(){
+			mLeft -= velocidad;
+			figura.style.marginLeft = mLeft +"px";
+		}
+
+		function moverArriba(){
+			mTop -= velocidad;
+			figura.style.marginTop = mTop +"px";
+		}
+
+		function moverAbajo(){
+			mTop += velocidad;
+			figura.style.marginTop = mTop +"px";
+		}
+
+
+	</script>
+
+
+	</body>
+
+</html>
